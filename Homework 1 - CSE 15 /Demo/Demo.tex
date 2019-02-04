@@ -1,0 +1,75 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\title{A Brief Article}
+\author{Angelo Kyrilov}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Blah, blah, blah
+
+\section{Other Stuff}
+
+This is how you make a bullet list
+
+\begin{itemize}
+\item Point 1
+\item Point 2
+\end{itemize}
+
+\noindent
+and a numbered list
+
+\begin{enumerate}
+\item France
+\item Croatia
+\item Some other team
+\end{enumerate}
+
+\noindent
+You can also make a table with borders, that is as big as the content:
+\\\\
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Code} & \textbf{Name} \\
+\hline
+\hline
+CSE15 & Discrete Mathematics\\
+CSE30 & Data Structures \\
+\hline
+\end{tabular}
+\\\\\\
+\noindent
+Or a custom sized table, without any borders:
+\\\\
+\begin{tabular}{p{2in} p{4.15in}}
+    \textsc{Education} &  Some school\\\\
+    & Some other school\\\\
+    \textsc{Employment} & Some place\\\\
+    & Some other place
+\end{tabular}
+\section{Mathematical Stuff}
+
+One of the biggest advantages of \LaTeX~is its ability to produce beautifully typeset mathematics. Here is the quadratic formula:
+
+$$x = -b \pm \frac{\sqrt{b^2-4ac}}{2a}$$
+
+\noindent
+You can also type math in the middle of paragraphs. For example the formula above is the solution to $ax^2+bx+c = 0$, which is the quadratic equation. You can even write fractions in paragraphs. Do you know what $\frac{1}{2} + \frac{1}{3}$ is equal to?
+
+\LaTeX~offers everything you need to typeset mathematics, Greek letters, like $\alpha, \beta, \gamma, \pi, \theta, \varphi$, other useful symbols like $\infty, \sum, \in, \land, \lor,\lnot, \to$
+
+You can also write solutions to equations, and it all lines up neatly. For example:
+
+\begin{align*}
+    x^2 + 2x - 2 &= 1\\
+    x^2 + 2x - 3 &= 0\\
+    (x + 3)(x - 1) &= 0\\
+\end{align*}
+Therefore $x = -3$ or $x = 1$
+
+\end{document}
