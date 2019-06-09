@@ -1,0 +1,341 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+
+\title{CSE - 015: Homework 3}
+\author{Jaime Rivera}
+
+\begin{document}
+\maketitle
+
+
+
+\section{Knights and Knaves:}
+Recall the Knights and Knaves puzzle we saw in class. In that fictional world there are two types of people.
+Knights - who always tell the truth, and Knaves - who always lie. It is impossible to distinguish them by
+appearance, but only by the truth of their statements.
+
+\begin{itemize}
+\item One day a traveller was wandering around the island of Knights and Knaves, when he encountered
+two local inhabitants, P and Q. The traveller asked: “Is any of you a knave?”. P replied: “At least
+one of us is a knave”.
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+Case & P & Q \\ 
+1 & Knight & Knight \\ 
+2 & Knave & Knight \\ 
+3 & Knight & Knave \\
+4 & Knave & Knave \\
+ \hline
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item Can you find out what P and Q are? If so, what are they? If not, explain why not, and what other
+information you would need to know. 
+\begin{itemize}
+\item Knave: always tells lie
+\item Knight: always tells truth 
+\item P's statement is false for the case 1 and True for the cases 2,3 and 4. If P is a Knight then what he says would be true, that means case 1 can't happen but case 3 can. If P is a Knave, whatever he would say must be False, meaning neither case 2 nor case 4 can happen as Knave always lie. Thus the only possible case is Row 3 and therefore P is a Knight and Q is a Knave.
+\end{itemize}
+\end{itemize}
+\end{itemize} 
+ 
+ 
+ 
+ 
+ \begin{itemize}
+\item Later on, the traveller met two other locals, A and B. He asked whether either of them is a knight.
+A replied: “If B is a knave, then I am a knave too”.
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+Case & P & Q \\ 
+1 & Knight & Knight \\ 
+2 & Knave & Knight \\ 
+3 & Knight & Knave \\
+4 & Knave & Knave \\
+ \hline
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item What are A and B?
+ \begin{itemize}
+\item Knave: always tells lie
+\item Knight: always tells truth 
+\item A's statement is false for the case 1 and True for the cases 2,3 and 4. If P is a Knight then what he says would be true, that means case 1 and case 3 can't happen. If P is a knave then what he says would be False, this means case 4 can't happen. The only possibility is that A is a Knave and B is a Knight, i.e, case 2 is the only possible scenario.
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+ 
+
+
+
+\section{Logical Identities: }
+
+Simplify the following propositions. Show all steps of your solutions.
+
+\begin{itemize}
+\item $-(p \to (q \to p))$
+
+ \begin{itemize}
+\item According to the Implication Law: $p \to q \equiv \neg q \vee p $. so, $ \neg (p \to (\neg q \vee p) $
+\item Again using Implication Law: $ \neg ( \neg p \vee (\neg q \vee p))$
+\item According to De Morgans's Law: $\neg (a \vee b) \equiv \neg a \wedge \neg b,$  $\neg p \equiv  a $ $ and $ $(\neg q \vee p) \equiv b $ 
+\begin{itemize}
+\item $ \neg( \neg p) \wedge \neg ( \neg q \vee p)$
+\end{itemize}
+\item Again using De Morgans's Law: $\neg (a \vee b)$ $ \equiv $ $\neg a \wedge \neg b,$
+\begin{itemize}
+\item $\neg q $ is a 
+\item p is b 
+\item $ \neg (\neg p) \wedge \neg(\neg q) \wedge \neg p$
+\end{itemize}
+\item According to double negation law: $\neg (\neg p ) \equiv p $ 
+\begin{itemize}
+\item $p \wedge q \wedge \neg p $
+\item $p \wedge \neg p \wedge q $
+\end{itemize}
+\item $p \wedge \neg p \equiv F $, thus 
+\item $FALSE \wedge q  \equiv q $
+\end{itemize}
+\end{itemize}
+
+
+
+ \begin{itemize}
+\item $-p((p \wedge  q) \to (q \vee p))$
+
+ \begin{itemize}
+ \item Let $(p \wedge q)$ be a, $(q \vee p)$ be b 
+\item According to Implication Law, $ p \to q \equiv \neg p \vee q $
+ \begin{itemize}
+ \item $ \neg a \vee b $
+ \end{itemize}
+\item Substituting the values of a and b we have,
+ \begin{itemize}
+ \item $ \neg (p \wedge q) \vee ( q \vee p)$ 
+ \end{itemize}
+\item According to De Morgan's Law: $ \neg(p \wedge q) \equiv \neg p \vee  \neg q$ 
+ \begin{itemize}
+ \item $\neg p \vee \neg q \vee (q \vee p)$ ----------- 1
+\end{itemize}
+\item According to associative law: $(p \vee q) \vee r \equiv p \vee (q \vee r) $
+\item Rearranging 1, 
+ \begin{itemize}
+ \item $(\neg p \vee p) \vee (\neg q \vee q)$
+\end{itemize}
+\item According to negation laws, $ p \vee \neg p \equiv T$
+\item $TRUE \vee TRUE$ $ \equiv TRUE$
+\end{itemize}
+\end{itemize}
+
+
+
+
+
+
+
+\section{Logical Equivalences}
+
+Determine whether or not the following pairs of propositions are equivalent. Show all steps.
+
+
+
+\begin{itemize}
+\item $ p \to (q \to r)$ and $(p \wedge q) \to r $
+
+ \begin{itemize}
+\item Answer: $ p \to (q \to r)$ $ \ne  $ $(p \wedge q) \to r $
+
+\vskip 0.1in
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$q$ & $r$ & $p$ & $q \to r$ & $p \to (q \to r)$ \\
+\hline
+0 & 0 & 0 & 1 & 1 \\
+0 & 0 & 1 & 1 & 1 \\
+0 & 1 & 0 & 1 & 1 \\
+0 & 1 & 1 & 1 & 1 \\
+1 & 0 & 0 & 0 & 1 \\
+1 & 0 & 1 & 0 & 0 \\
+1 & 1 & 0 & 1 & 1 \\
+1 & 1 & 1 & 1 & 1 \\
+\hline
+\end{tabular}
+
+\vskip 0.1in
+
+and 
+
+\vskip 0.1in
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $r$ & $p \land q$ & $(p \land q) \to r$ \\
+\hline
+0 & 0 & 0 & 0 & 1 \\
+0 & 0 & 1 & 0 & 1 \\
+0 & 1 & 0 & 0 & 1 \\
+0 & 1 & 1 & 0 & 1 \\
+1 & 0 & 0 & 0 & 1 \\
+1 & 0 & 1 & 0 & 1 \\
+1 & 1 & 0 & 1 & 0 \\
+1 & 1 & 1 & 1 & 1 \\
+\hline
+\end{tabular}
+
+
+
+\end{itemize}
+
+ \end{itemize} 
+
+
+
+
+
+
+
+\begin{itemize}
+\item $ p \to (q \to r)$ and $ (p \to q) \to r$
+
+ \begin{itemize}
+\item Answer: $ p \to (q \to r)$ $ \ne  $ $ (p \to q) \to r$
+
+\vskip 0.1in
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$q$ & $r$ & $p$ & $q \to r$ & $p \to (q \to r)$ \\
+\hline
+0 & 0 & 0 & 1 & 1 \\
+0 & 0 & 1 & 1 & 1 \\
+0 & 1 & 0 & 1 & 1 \\
+0 & 1 & 1 & 1 & 1 \\
+1 & 0 & 0 & 0 & 1 \\
+1 & 0 & 1 & 0 & 0 \\
+1 & 1 & 0 & 1 & 1 \\
+1 & 1 & 1 & 1 & 1 \\
+\hline
+\end{tabular}
+
+\vskip 0.1in
+and
+\vskip 0.1in
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $r$ & $p \to q$ & $(p \to q) \to r$ \\
+\hline
+0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 1 & 1 & 1 \\
+0 & 1 & 0 & 1 & 0 \\
+0 & 1 & 1 & 1 & 1 \\
+1 & 0 & 0 & 0 & 1 \\
+1 & 0 & 1 & 0 & 1 \\
+1 & 1 & 0 & 1 & 0 \\
+1 & 1 & 1 & 1 & 1 \\
+\hline
+\end{tabular}
+
+
+
+
+
+\end{itemize}
+
+ \end{itemize} 
+
+
+
+
+
+
+
+\section{Logical Consequence}
+
+
+
+\begin{itemize}
+\item 1. 
+
+Jimmy is smart
+\vskip 0.1in
+Smart People are rich
+\vskip 0.1in
+ \textbf{----------------------------}
+\vskip 0.1in
+Jimmy is Rich 
+ \vskip 0.1in
+ 
+ 
+ \textbf{Answer:} Valid: Jimmy is rich 
+ 
+ Jimmy is smart
+\vskip 0.1in
+Jimmy then smart
+\vskip 0.1in
+Jimmy $\to$ smart
+
+Smart People are rich
+\vskip 0.1in
+Smart then rich 
+\vskip 0.1in
+Smart $\to$ rich 
+\vskip 0.1in
+Jimmy $\to$ rich $\equiv$ Jimmy is rich 
+
+  
+
+
+ \end{itemize} 
+    
+    
+    
+    
+   
+ 
+\begin{itemize}
+\item 2. 
+
+Islands are surrounded by water
+\vskip 0.1in 
+Puerto Rico is surrounded by water
+\vskip 0.1in 
+\textbf{--------------------------------------}
+\vskip 0.1in 
+Puerto Rico is an island
+\vskip 0.1in
+
+
+ \textbf{Answer:}  Not Valid: We cannot say Puerto Rico is an island is always true. 
+ 
+ Islands are surrounded by water
+ \vskip 0.1in
+ Islands $\to$ surrounded by water
+ \vskip 0.1in
+  Puerto Rico is surrounded by water
+ \vskip 0.1in
+ Puerto Rico $\to$ surrounded by water
+  \vskip 0.1in
+  Puerto Rico is not always an island 
+  
+   
+   
+ \end{itemize} 
+
+
+
+
+
+
+\end{document}
