@@ -1,0 +1,116 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{algorithmicx}
+\usepackage{listings}
+
+\title{CSE - 015: Homework 6}
+\author{Jaime Rivera}
+
+\begin{document}
+\maketitle
+
+
+\section{Modular Exponentiation:}
+
+\begin{itemize}
+
+\item 1. Compute the binary expansion of 2019
+
+\begin{itemize}
+
+\item Answer: $(2019_{10})$ = 11111100011
+\item Binary Expansion: $ 2^{10} + 2^{9} + 2^{8} + 2^{7}+2^{6}+ 2^{5}+ 2^{1}+ 2^{0}$
+
+\end{itemize} 
+
+\item 2. Compute $13^{2019}$ (mod 37) 
+
+\begin{itemize}
+
+\item Answer: $a^{p-1} $ = 1 mod p 
+\item $a^{p-1} $ mod p = 1
+\item $13^{37-1}$  mod 37 = 1
+\item $13^{36}$  mod 37 = 1
+\item 2019 = 36*56+3
+\item $13^{2019}$  mod 37 = $(13^{36}  mod 37)^{56}$ mod 37 * $13^{3}$ mod 37
+\item = (1 mod 37) * ($13^{3}$ mod 37)
+\item = ($13^{3}$ mod 37)
+\item = 2197 mod 37 
+\item = 14 
+
+\end{itemize} 
+
+\end{itemize} 
+
+
+
+\section{Greatest Common Divisor}
+
+\begin{itemize}
+
+\item 1. gcd(288,126)
+
+\begin{itemize}
+
+\item Answer: 
+\item A = 288 B = 126
+\item = ${\dfrac{288}{126}}$ = 36 
+\item A = 126 B = 36
+\item  = ${\dfrac{126}{36}}$ = 18
+\item A = 36 B = 18
+\item = ${\dfrac{36}{18}}$ = 0
+\item A = 18 B = 0
+\item = gcd(288,126) = 18 
+
+\end{itemize} 
+
+
+\item 2. gcd(899,703)
+
+\begin{itemize}
+
+\item Answer: 
+\item A = 889 B = 703
+\item = ${\dfrac{889}{703}}$ = 196
+\item A = 703 B = 196
+\item = ${\dfrac{703}{196}}$ = 115
+\item A = 196 B = 115
+\item = ${\dfrac{196}{115}}$ = 81
+\item A = 115 B = 81
+\item = ${\dfrac{115}{81}}$ = 34 
+\item A = 81 B = 34
+\item = ${\dfrac{81}{34}}$ = 13
+\item A = 34 B = 13
+\item = ${\dfrac{34}{13}}$ = 8
+\item A = 13 B = 8
+\item = ${\dfrac{13}{8}}$ = 5 
+\item A = 8 B = 5
+\item = ${\dfrac{8}{5}}$ = 3
+\item A = 8 B = 5
+\item = ${\dfrac{8}{5}}$ = 
+\item A = 5 B = 3
+\item = ${\dfrac{5}{3}}$ = 2
+\item A = 3 B = 2
+\item = ${\dfrac{3}{2}}$ = 1
+\item A = 2 B = 1
+\item = ${\dfrac{2}{1}}$ = 0
+\item A = 1 B = 0
+\item gcd(899,703) = 1
+
+
+
+
+
+
+
+
+\end{itemize} 
+
+\end{itemize} 
+
+
+
+
+\end{document}
