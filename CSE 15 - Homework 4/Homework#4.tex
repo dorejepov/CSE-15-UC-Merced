@@ -1,0 +1,166 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+
+\title{CSE - 015: Homework 4}
+\author{Jaime Rivera}
+
+\begin{document}
+\maketitle
+
+\section{Mathematical Proofs:}
+
+Prove (or disprove) the following results, showing all steps of your argument.
+
+\begin{itemize}
+
+\item 1. The sum of two odd integers is even.
+\begin{itemize}
+\item sum of two odd integers is even.
+\item even numbers can be represented by = 2n.
+\item odd numbers can be represented by = 2n+1.
+\item sum of two odd numbers.
+\item = $(2n+1) + (2n+2)$.
+\item = $(4n+2) = 2(n+1)$.
+\item It is multiples of 2, so it is divided by 2, therefore it is even. 
+\item Even: [number divided by 2 and reminder will be '0'].
+\item ODD: [number divided by 2 and reminder will be '1'].
+\end{itemize} 
+
+\item 2. The sum of two even integers is even.
+\begin{itemize}
+\item sum of two even integers is even
+\item even number = 2n
+\item sum of two even numbers = 2n+2n
+\item =4n
+\item =2(2n)
+\item It is multiple of 2. So it is even 
+\end{itemize} 
+
+
+\item 3. The square of an even number is even.
+\begin{itemize}
+\item even number = 2n
+\item square of even number = $(2n)(2n)$
+\item = $4n^2$
+\item = $2(2n^2)$
+\item It is a multiple of 2, since it can be divided by 2 it is  even.
+\end{itemize} 
+
+\item 4. The product of two odd integers is odd.
+\begin{itemize}
+\item odd number = 2n+1
+\item product of two odd numbers
+\item = $(2n+1)(2n+1)$
+\item = $4n^2 + 4n + 1$
+\item = $2(2n^2 +2n) +1$ \textcircled{1}
+\item If we divide \textcircled{1} then reminder is always (1) so it is odd.
+\end{itemize} 
+
+
+\item 5. If  $ n^3 +5 $ is odd then n is even, for any $n \in Z$
+\begin{itemize}
+\item Proof by contraposition
+\item The contrapositive is “If n is odd, then n3 + 5 is even for any $n \in Z$ .” Assume that n is odd. We can now write n = 2k + 1 for some integer k. Then $n^{3} + 5 = (2k + 1)^{3} + 5 = 8k^{3} + 12k^{2} + 6k + 6 = 2(4k^{3} + 6k^{2} + 3k + 3)$. Thus $n^{3} + 5$ is two times some integer, so it is even by the definition of an even integer.
+\end{itemize} 
+
+\item 6. If $3n +2$ is even then n is even, for any $n \in Z$
+\begin{itemize}
+\item odd x odd = odd
+\item odd + even = odd
+\item Thus, if n was odd, then:
+\item $3n+2$ = odd x odd + even = odd + even = odd
+\item We know that $3n +2$ is even for any $n \in Z$
+\item n can't be odd
+\end{itemize} 
+
+
+\item 7. The sum of a rational number and an irrational number is irrational.
+\begin{itemize}
+\item Proof by Contradiction
+\item Assume:
+\item rational + irrational = rational 
+\item rational = a/b form 
+\item $a/b + x = m/n$
+\item $x = m/n - a/b$
+\item $= \frac{mb - an}{nb}$ = it is in p/q form 
+\item x is irrational (not in p/q form)
+\item rational + irrational = rational 
+\end{itemize} 
+
+
+\item 8. The product of two irrational numbers is irrational.
+\begin{itemize}
+\item Proof:
+\item two irrational numbers a,b
+\item $a * b = c$
+\item $1/n * n = 1 -> rational$
+\item  $a * b = c$ 
+\item $n*n = n^2 -> irrational$
+\item Some times it is rational. Some time is is irrational. It depends on numbers $a,b$. 
+\end{itemize} 
+
+\end{itemize} 
+
+
+
+
+\section{Basic Counting Principles:}
+
+Answer the following questions. Show all steps of your solutions.
+
+\begin{itemize}
+
+\item 1. How many different three-letter initials can people have?
+\begin{itemize}
+\item In any three letter initial the word has to be among the 26 letter alphabet (a-z).
+\item The total number of three letter  initials = $26 * 26 * 26 = 17576$.
+\end{itemize} 
+
+\item 2. How many different arrangements of the English alphabet are there?
+\begin{itemize}
+\item Since they are 26 letters in the English alphabet, so they can be arranged in 26! arrangements. 
+\end{itemize} 
+
+
+\item 3. There are 18 mathematics majors and 325 computer science majors at a college. In how many ways
+can two representatives be picked so that one is a mathematics major and the other is a computer
+science major?
+\begin{itemize}
+\item Select any one of the 18 students(mathematics majors) and any one of the 325 (computer science majors).
+\item So total number of ways in which representatives can be selected is 18*325=5850.
+\end{itemize}
+
+
+\item 4. A particular brand of shirt comes in 12 colors, has a male version and a female version, and comes in
+three sizes for each sex. How many different types of this shirt are made?
+\begin{itemize}
+\item Each sex total number of types of shirts $12*3=36$  for each color there are three sizes).
+\item The total number of types of shirts for both sex will be $36*2=72$.
+\end{itemize} 
+
+
+\item 5. A multiple-choice test contains 10 questions. There are four possible answers for each question. In
+how many ways can a student answer the questions on the test if the student answers every question?
+\begin{itemize}
+\item Each question can be answered in 4 ways so total number of ways in which all questions can be answered is
+\item $4^{10}=1048576$
+\end{itemize} 
+
+\item 6. Suppose we have the same multiple choice test as described in question 5, but we relax the assumption
+that the student has to answer all questions. In other words, how many ways are there for a student
+answer the questions on the test if the student can leave answers blank?
+\begin{itemize}
+\item Let student answers i questions these i questions can be selected from 10 questions is 10Ci and after selecting these i questions can be answered in 4i ways so total number number of ways in which student can answer these i questions is....
+\item $C_i * 4^{i}$ and i varies from 0 to 10 ......(student can select no question to answer or can answer all the questions)
+\item Total number of ways will be equal to:
+
+$(x + y)^{n} = \sum_{i=0}^{\infty}$  $C_{i}^{n} * x^{n-i} * y^{i}$ 
+\vskip 0.1in 
+$\sum_{i=0}^{i=10}$  $C_{i}^{10} * 4^{i} $ = $\sum_{i=0}^{i=10}$ $C_{i}^{10} * 4^{i} * 1^{10-i}$ = $(1+4)^{10} = 5^{10}$
+\end{itemize} 
+\end{itemize} 
+
+\end{document}
