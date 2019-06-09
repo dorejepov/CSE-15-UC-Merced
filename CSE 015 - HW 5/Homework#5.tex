@@ -1,0 +1,193 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{algorithmicx}
+\usepackage{listings}
+
+\title{CSE - 015: Homework 5}
+\author{Jaime Rivera}
+
+\begin{document}
+\maketitle
+
+\section{Complexity Analysis}
+
+Derive a complexity function for the following algorithms:
+
+\begin{lstlisting}
+
+def doNothing(someList):
+       return False
+
+\end{lstlisting}
+
+
+\begin{itemize}
+
+\item Answer: O(1)
+
+\end{itemize} 
+
+
+\begin{lstlisting}
+
+def doSomething(someList):
+       if len(someList) = = 0:
+          return 0
+       else if len(list = = 1):
+          return 1
+       else:
+          return doSomething(someList[1:])
+
+\end{lstlisting}
+
+
+\begin{itemize}
+
+\item Answer: O(n)
+
+\end{itemize} 
+
+
+
+\begin{lstlisting}
+
+def doSomethingElse(someList):
+       n = len(someList)
+       for i in range (n):
+             for j in range(n):
+                  if someList[i] > someList[j]
+                     temp = someList[i]
+                     someList[i] = someList[j]
+                     someList[j] = temp
+           return someList
+
+\end{lstlisting}
+
+
+\begin{itemize}
+
+\item Answer: $O(n^{2})$
+
+\end{itemize} 
+
+
+\section{Order of Complexity}
+
+Prove the following:
+
+f(n) = O(g(n)) if there exists a positive integer $n_0$ and a positive constant c, such that f(n) $<=$ $c*g(n) \bigvee$ n $>=$ $n_0$
+
+\begin{itemize}
+
+\item $f(n) = 3n + 2 $ $ \in O(n) $
+
+\begin{itemize}
+
+\item Answer: Clearly, for c = 4 and $n >= 2$, we have
+\newline 0 $<=$ f(n) $<=$ 4n
+\newline Hence, f(n) = O(n)
+
+\end{itemize} 
+
+\end{itemize}
+
+
+\begin{itemize}
+
+\item $g(n) = 7  \in O(1) $
+
+\begin{itemize}
+
+\item Answer: Clearly, for c = 8 and n $>=$ 0, we have 
+\newline 0 $<=$ f(n) $<=$ 8*1
+\newline Hence, f(n) = O(1)
+
+\end{itemize} 
+
+
+\end{itemize}
+
+
+\begin{itemize}
+
+\item $h(n) = n^{2} + 2n + 4 \in O(n^{2})$
+
+\begin{itemize}
+
+\item Answer: Clearly, for c = 3 and n $>=$ 3, we have
+\newline 0 $<=$ f(n) $<=$ $3*n^{2}$
+\newline Hence, $f(n) = O(n^{2})$
+
+\end{itemize} 
+
+\end{itemize}
+
+
+\section{Mathematical Induction}
+
+Use mathematical induction to show that the following results hold for all positive integers:
+
+
+
+\begin{itemize}
+
+\item $ 1 + 2 + 3 + ... + n = \frac{n(n+1)} {2} $
+
+\begin{itemize}
+
+\item Answer: 
+
+for n = 1:
+
+LHS = 1
+\newline RHS =$ \frac{1(1+1)} {2}= \frac{2}{2} = 1 $ 
+\newline so, LHS = RHS for n = 1
+\newline lets assume LHS = RHS for n = k
+\newline so, $ 1+ 2 +...+ k $ = $ \frac{k(k+1)}{2} $
+\newline for n = k + 1:
+\newline LHS = 1+2+ ...+k + (k+1)
+\newline =$\frac{k(k+1)}{2} + (k+1)$
+\newline =$k(k+1) + \frac {2(k+1)}{2}$
+\newline =$\frac {((k+1)(k+2))}{2}$
+\newline =RHS
+\newline so, LHS = RHS for n = k +1, given that LHS = RHS for n = k 
+\newline hence proved by induction
+\end{itemize} 
+
+\end{itemize} 
+
+\begin{itemize}
+
+\item $ 2 + 2^{2} + 2^{3} + 2^{4} + .... + 2^{n} = 2^{n+1} - 2 $
+
+\begin{itemize}
+
+\item Answer: 
+
+for n = 1:
+
+LHS = 2
+\newline RHS = $2^{1+1} -2 = 2^{2} - 2 = 4 -2 = 2$
+\newline so, LHS = RHS for n = 1
+\newline Let's assume LHS = RHS for n = k:
+\newline so, $2 + 2^{2} + 2^{3} + ... + 2^{k} = 2^{k+1} - 2 $
+\newline for n = k + 1:
+\newline LHS = so, $2 + 2^{2} + 2^{3} + ... + 2^{k} + 2^{k+1}$
+\newline =$ 2^{k+1} - 2 + 2^{k+1}$
+\newline =$ 2*(2^{k+1}) - 2$
+\newline =$ 2^{k+2} -2 $
+\newline =RHS
+\newline so, LHS = RHS for n = k +1, given that LHS = RHS for n = k 
+\newline hence proved by induction
+
+
+\end{itemize} 
+
+\end{itemize} 
+
+
+
+
+\end{document}
