@@ -1,0 +1,145 @@
+\documentclass[11pt]{article}
+
+\title{CSE - 015: Homework 2: Propositional Logic and Variables}
+\author{Jaime Rivera}
+
+\begin{document}
+\maketitle
+
+\section{Knowledge Representation:}
+
+\begin{itemize}
+\item It is not cloudy and it is not raining. 
+
+\begin{itemize}
+\item Solution: Let p = It is not cloudy, and let q = it is not raining, then $ -p \wedge -q$
+ \end{itemize} 
+
+
+\item I like to eat apples and bananas.
+
+\begin{itemize}
+\item Solution: Let p = I like to eat apples, and q = I like to eat bananas, then $p \wedge q$
+ \end{itemize} 
+ 
+\item Behind the clouds the sun is shining.
+
+\begin{itemize}
+\item Solution: Let p = Behind the clouds the sun is shinning, then  $ p  $
+ \end{itemize} 
+ 
+\item If a function is differentiable then the function is continuous. 
+
+\begin{itemize}
+\item Solution: Let p = If a function is differentiable, and q = the function is continuous, then $ p \to q $
+ \end{itemize} 
+
+ \item I will study for the final otherwise I will fail. 
+
+\begin{itemize}
+\item Solution: Let p =  I will study for the final, and q = I will fail, then $ p \to q $
+ \end{itemize} 
+
+\end{itemize}
+
+
+
+
+\section{Equivalence in Propositional Logic:}
+
+
+\begin{itemize}
+\item 1. $p  \wedge  q$ and $p  \vee  \neg q$ 
+
+\begin{itemize}
+\item Solution: They are not equivalent, because  For p = T and q = F, $T  \wedge F$ = F and $T \vee \neg F $ = T, which makes them not equivalent.
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+$p$ & $q$ & $p \land q$ & $p \lor  \lnot q$ \\
+\hline
+0 & 0 & 0 & 1 \\
+0 & 1 & 0 & 0 \\
+1 & 0 & 0 & 1 \\
+1 & 1 & 1 & 1 \\
+\hline
+\end{tabular}
+
+ \end{itemize} 
+
+\item 2. $p \vee q$ and  $\neg p \vee  \neg q $
+
+\begin{itemize}
+\item Solution: They are not equivalent, because for p = F and q = F, $F \vee F$ = F and $\neg F \vee \neg F $= T, which makes them not equivalent.
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+$p$ & $q$ & $p \lor q$ & $ \lnot p \lor  \lnot q$ \\
+\hline
+0 & 0 & 0 & 1 \\
+0 & 1 & 1 & 1 \\
+1 & 0 & 1 & 1 \\
+1 & 1 & 1 & 0 \\
+\hline
+\end{tabular}
+
+ \end{itemize} 
+
+\item 3. $p \to q$ and $ \neg q \to \neg p $
+
+\begin{itemize}
+\item Solution: They are equivalent. Proof: Contra Positive, TruthTable rows Match.
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+$p$ & $q$ & $p \to q$ & $ \lnot q \to  \lnot p$ \\
+\hline
+0 & 0 & 1 & 1 \\
+0 & 1 & 1 & 1 \\
+1 & 0 & 0 & 0 \\
+1 & 1 & 1 & 1 \\
+\hline
+\end{tabular}
+
+ \end{itemize} 
+ 
+\item 4. $p \to q $ and $ \neg p \vee q $
+
+\begin{itemize}
+\item Solution: They are equivalent. Proof The TruthTable, the rows match.
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+$p$ & $q$ & $p \to q$ & $ \lnot p \lor q$ \\
+\hline
+0 & 0 & 1 & 1 \\
+0 & 1 & 1 & 1 \\
+1 & 0 & 0 & 0 \\
+1 & 1 & 1 & 1 \\
+\hline
+\end{tabular}
+
+ \end{itemize} 
+ 
+\item 5. $ \neg (p \wedge q) $ and $ \neg p \vee  \neg q $
+
+\begin{itemize}
+\item Solution: They are equivalent. Proof: De Morgan's Law, TruthTable rows Match 
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+$p$ & $q$ & $ \lnot (p \land q)$ & $ \lnot p \lor  \lnot q$ \\
+\hline
+0 & 0 & 1 & 1 \\
+0 & 1 & 1 & 1 \\
+1 & 0 & 1 & 1 \\
+1 & 1 & 0 & 0 \\
+\hline
+\end{tabular}
+
+ \end{itemize} 
+ 
+\end{itemize}
+
+
+\end{document}
